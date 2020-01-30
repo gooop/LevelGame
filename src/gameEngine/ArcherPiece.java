@@ -22,6 +22,6 @@ public class ArcherPiece extends GamePiece {
 		if (Math.abs(playerLocation - this.location) == 2) {
 			return InteractionResult.KILL;
 		}
-		return null;
+		return InteractionResult.NONE;
 	}
 }

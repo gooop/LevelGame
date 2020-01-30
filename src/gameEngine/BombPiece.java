@@ -22,7 +22,7 @@ public class BombPiece extends GamePiece {
 		if (playerLocation == this.location) {
 			return InteractionResult.KILL;
 		}
-		return null;
+		return InteractionResult.NONE;
 	}
 	
 }
