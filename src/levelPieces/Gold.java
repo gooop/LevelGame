@@ -1,12 +1,13 @@
-package gameEngine;
+package levelPieces;
 
-import levelPieces.GamePiece;
+import gameEngine.Drawable;
+import gameEngine.InteractionResult;
 
-public class GoldPiece extends GamePiece {
+public class Gold extends GamePiece {
 	private char symbol;
 	private int location;
 	
-	public GoldPiece(char symbol, int location) {
+	public Gold(char symbol, int location) {
 		super(symbol, location);
 		this.symbol = 'G';
 		this.location = location;

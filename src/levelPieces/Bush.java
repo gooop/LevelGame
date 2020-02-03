@@ -1,10 +1,12 @@
-package gameEngine;
+package levelPieces;
 
-public class BushPiece implements Drawable{
+import gameEngine.Drawable;
+
+public class Bush implements Drawable{
 	char symbol = 'B';
 	int location;
 	
-	public BushPiece(int loc) {
+	public Bush(int loc) {
 		location = loc;
 	}
 	

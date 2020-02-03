@@ -96,7 +96,7 @@ public class GameEngine {
 	 */
 	public void movePieces() {
 		for (Moveable piece : movingPieces) {
-			piece.move(gameBoard, player.getLocation());		
+			piece.move(gameBoard, player.getLocation());	
 		}	
 	}
 

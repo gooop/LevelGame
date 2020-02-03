@@ -1,14 +1,15 @@
-package gameEngine;
+package levelPieces;
 
-import levelPieces.GamePiece;
+import gameEngine.Drawable;
+import gameEngine.InteractionResult;
 
-public class BomberPiece extends GamePiece implements Moveable{
+public class Bomb extends GamePiece {
 	private char symbol;
 	private int location;
 	
-	public BomberPiece(char symbol, int location) {
+	public Bomb(char symbol, int location) {
 		super(symbol, location);
-		this.symbol = 'B';
+		this.symbol = 'x';
 		this.location = location;
 	}
 
@@ -16,19 +17,13 @@ public class BomberPiece extends GamePiece implements Moveable{
 	public void draw() {
 		System.out.print(symbol);
 	}
-
-	@Override
-	public void move(Drawable[] gameBoard, int playerLocation) {
-		// TODO add a rng for if it drops a bomb
-		
-	}
-
+	
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
 		if (playerLocation == this.location) {
-			return InteractionResult.HIT;
+			return InteractionResult.KILL;
 		}
 		return InteractionResult.NONE;
 	}
-
+	
 }

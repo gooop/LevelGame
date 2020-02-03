@@ -2,12 +2,9 @@ package levelPieces;
 
 import java.util.ArrayList;
 
-import gameEngine.BushPiece;
 import gameEngine.Drawable;
-import gameEngine.EnemyPiece;
 import gameEngine.GameEngine;
 import gameEngine.Moveable;
-import gameEngine.Player;
 
 public class LevelEngine {
 	private Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
@@ -26,8 +23,8 @@ public class LevelEngine {
 	}
 	
 	private void generateLevel1() {
-		gameBoard[1] = new BushPiece(1);
-		EnemyPiece e1 = new EnemyPiece('E', 5);
+		gameBoard[1] = new Bush(1);
+		Knight e1 = new Knight('E', 5);
 		gameBoard[5] = e1;
 		movingPieces.add(e1);
 		interactingPieces.add(e1);
