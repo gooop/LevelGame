@@ -1,17 +1,19 @@
-package gameEngine;
+package levelPieces;
 
-import levelPieces.GamePiece;
+import gameEngine.Drawable;
+import gameEngine.InteractionResult;
+import gameEngine.Moveable;
 
-public class EnemyPiece extends GamePiece implements Moveable, Drawable {
+public class Bomber extends GamePiece implements Moveable{
 	private char symbol;
 	private int location;
 	
-	public EnemyPiece(char symbol, int location) {
+	public Bomber(char symbol, int location) {
 		super(symbol, location);
-		this.symbol = 'E';
+		this.symbol = 'B';
 		this.location = location;
 	}
-	
+
 	@Override
 	public void draw() {
 		System.out.print(symbol);
@@ -19,14 +21,14 @@ public class EnemyPiece extends GamePiece implements Moveable, Drawable {
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		location++;
+		// TODO add a rng for if it drops a bomb
 		
 	}
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
 		if (playerLocation == this.location) {
-			return InteractionResult.KILL;
+			return InteractionResult.HIT;
 		}
 		return InteractionResult.NONE;
 	}

@@ -22,7 +22,7 @@ public interface Moveable extends Drawable{
 	 * additional calls in GameEngine to move the piece. 
 	 * 
 	 * @param gameBoard board with piece/null that is in each location
-	 * @param playerLocation players current location on board
+	 * @param playerLocation player's current location on board
 	 * 
 	 */
 	public void move(Drawable[] gameBoard, int playerLocation);

@@ -1,12 +1,13 @@
-package gameEngine;
+package levelPieces;
 
-import levelPieces.GamePiece;
+import gameEngine.Drawable;
+import gameEngine.InteractionResult;
 
-public class ArcherPiece extends GamePiece {
+public class Archer extends GamePiece {
 	private char symbol;
 	private int location;
 	
-	public ArcherPiece(char symbol, int location) {
+	public Archer(char symbol, int location) {
 		super(symbol, location);
 		this.symbol = 'A';
 		this.location = location;
