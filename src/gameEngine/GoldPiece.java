@@ -22,7 +22,7 @@ public class GoldPiece extends GamePiece {
 		if (location == playerLocation) {
 			return InteractionResult.GET_POINT;
 		}
-		return null;
+		return InteractionResult.NONE;
 	}
 
 }

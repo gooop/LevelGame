@@ -112,7 +112,7 @@ public class GameEngine {
 			InteractionResult result = piece.interact(gameBoard, player.getLocation());		
 			if (result == InteractionResult.GET_POINT) {
 				player.addPoint(); 
-				System.out.println("\nYou just won a prize!\n");
+				System.out.println("\nYou picked up Gold!\n");
 			}
 			if (result == InteractionResult.HIT) {
 				player.takeDamage();

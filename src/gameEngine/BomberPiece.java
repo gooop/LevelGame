@@ -28,7 +28,7 @@ public class BomberPiece extends GamePiece implements Moveable{
 		if (playerLocation == this.location) {
 			return InteractionResult.HIT;
 		}
-		return null;
+		return InteractionResult.NONE;
 	}
 
 }

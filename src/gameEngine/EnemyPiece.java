@@ -2,7 +2,7 @@ package gameEngine;
 
 import levelPieces.GamePiece;
 
-public class EnemyPiece extends GamePiece implements Moveable {
+public class EnemyPiece extends GamePiece implements Moveable, Drawable {
 	private char symbol;
 	private int location;
 	
@@ -19,7 +19,7 @@ public class EnemyPiece extends GamePiece implements Moveable {
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
+		location++;
 		
 	}
 
@@ -28,7 +28,7 @@ public class EnemyPiece extends GamePiece implements Moveable {
 		if (playerLocation == this.location) {
 			return InteractionResult.KILL;
 		}
-		return null;
+		return InteractionResult.NONE;
 	}
 
 }
