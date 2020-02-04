@@ -20,7 +20,11 @@ public class Gold extends GamePiece {
 	
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
+		if (this.symbol == ' ') { // if the object has already been interacted with
+			return InteractionResult.NONE;
+		}
 		if (location == playerLocation) {
+			this.symbol = ' ';
 			return InteractionResult.GET_POINT;
 		}
 		return InteractionResult.NONE;
