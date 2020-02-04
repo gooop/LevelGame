@@ -24,7 +24,7 @@ public class Knight extends GamePiece implements Moveable, Drawable {
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		gameBoard[location] = null;
 		if (Math.abs(playerLocation - location) == 1) {
-			// does nothing
+			// does nothing if it is close enough to the player
 		} else if (playerLocation > location) {
 			location++;
 		} else {

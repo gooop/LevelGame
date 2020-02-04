@@ -31,7 +31,7 @@ public class Bomber extends GamePiece implements Moveable{
 		// Whether or not the Bomber drops a bomb is being handled in move in order to streamline its integration with GameEngine
 		randomBombInt = randomBombGeneratoRandom.nextInt(100);
 		if (true /*randomBombInt < 24*/) { // There's a 25% chance for the bomber to drop a bomb
-			gameBoard[location] = new levelPieces.Bomber('x', location);
+			gameBoard[location] = new levelPieces.Bomb('x', location);
 		}
 		
 		// The Bomber will move two steps in a row up and down the level

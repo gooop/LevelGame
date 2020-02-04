@@ -23,28 +23,38 @@ public class LevelEngine {
 	}
 	
 	private void generateLevel1() {
-		//Bush:
-		//Sets the bush to space 1 no matter how big the board is
+		// Bush:
+		// Sets the bush to space 1 no matter how big the board is
 		gameBoard[GameEngine.BOARD_SIZE - (GameEngine.BOARD_SIZE - 1)] = new Bush(GameEngine.BOARD_SIZE - (GameEngine.BOARD_SIZE - 1));
-		//Knight:
-		//Sets knight to be in the first fifth edge of the board
+		// Knight:
+		// Sets knight to be in the first fifth edge of the board
 		Knight e1 = new Knight('E', GameEngine.BOARD_SIZE / 5);
 		gameBoard[GameEngine.BOARD_SIZE / 5] = e1;
 		movingPieces.add(e1);
 		interactingPieces.add(e1);
-		
+		// Bomber:
+		// Sets the bomber to the last 4/5th of the board
+		Bomber b1 = new Bomber('B', GameEngine.BOARD_SIZE - 3); 
+		movingPieces.add(b1);
+		interactingPieces.add(b1);
 	}
 	
 	private void generateLevel2() {
-		//Bush:
-		//Sets the bush to space 3 no matter how big the board is
+		// Bush:
+		// Sets the bush to space 3 no matter how big the board is
 		gameBoard[GameEngine.BOARD_SIZE - 2] = new Bush(GameEngine.BOARD_SIZE - 2);
-		//Bush:
-		//Sets knight to be in the first quarter edge of the board
+		// Bush:
+		// Sets knight to be in the first quarter edge of the board
 		Knight e1 = new Knight('E', GameEngine.BOARD_SIZE / 4);
 		gameBoard[GameEngine.BOARD_SIZE / 4] = e1;
 		movingPieces.add(e1);
 		interactingPieces.add(e1);
+		// Bomber:
+		// Bomber:
+		// Sets the bomber to the last 3/4th of the board
+		Bomber b1 = new Bomber('B', GameEngine.BOARD_SIZE - 3); 
+		movingPieces.add(b1);
+		interactingPieces.add(b1);
 	}
 
 	public Drawable[] getBoard() {

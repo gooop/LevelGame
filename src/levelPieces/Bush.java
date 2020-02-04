@@ -3,7 +3,7 @@ package levelPieces;
 import gameEngine.Drawable;
 
 public class Bush implements Drawable{
-	char symbol = 'B';
+	char symbol = '*';
 	int location;
 	
 	public Bush(int loc) {
