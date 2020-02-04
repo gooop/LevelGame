@@ -23,16 +23,28 @@ public class LevelEngine {
 	}
 	
 	private void generateLevel1() {
-		gameBoard[1] = new Bush(1);
-		Knight e1 = new Knight('E', 5);
-		gameBoard[5] = e1;
+		//Bush:
+		//Sets the bush to space 1 no matter how big the board is
+		gameBoard[GameEngine.BOARD_SIZE - (GameEngine.BOARD_SIZE - 1)] = new Bush(GameEngine.BOARD_SIZE - (GameEngine.BOARD_SIZE - 1));
+		//Knight:
+		//Sets knight to be in the first fifth edge of the board
+		Knight e1 = new Knight('E', GameEngine.BOARD_SIZE / 5);
+		gameBoard[GameEngine.BOARD_SIZE / 5] = e1;
 		movingPieces.add(e1);
 		interactingPieces.add(e1);
 		
 	}
 	
 	private void generateLevel2() {
-		
+		//Bush:
+		//Sets the bush to space 3 no matter how big the board is
+		gameBoard[GameEngine.BOARD_SIZE - 2] = new Bush(GameEngine.BOARD_SIZE - 2);
+		//Bush:
+		//Sets knight to be in the first quarter edge of the board
+		Knight e1 = new Knight('E', GameEngine.BOARD_SIZE / 4);
+		gameBoard[GameEngine.BOARD_SIZE / 4] = e1;
+		movingPieces.add(e1);
+		interactingPieces.add(e1);
 	}
 
 	public Drawable[] getBoard() {
