@@ -32,7 +32,7 @@ public class Bomber extends GamePiece implements Moveable{
 			location += 2;
 		} else if (randomMoveInt < 50 && location + 2 >= GameEngine.BOARD_SIZE) { // small + no room to move
 			location -= 2;
-		} else if (randomMoveInt > 50 && location - 2 > 0) { // large and room to move
+		} else if (randomMoveInt > 50 && location - 2 >= 0) { // large and room to move
 			location -= 2;
 		} else {
 			location += 2; // large and no room to move
@@ -52,4 +52,8 @@ public class Bomber extends GamePiece implements Moveable{
 		return InteractionResult.NONE;
 	}
 
+	@Override
+	public int getLocation() {
+		return location;
+	}
 }

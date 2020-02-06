@@ -41,5 +41,10 @@ public class Knight extends GamePiece implements Moveable, Drawable {
 		}
 		return InteractionResult.NONE;
 	}
+	
+	@Override
+	public int getLocation() {
+		return location;
+	}
 
 }
