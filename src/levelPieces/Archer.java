@@ -18,6 +18,7 @@ public class Archer extends GamePiece {
 		System.out.print(symbol);
 	}
 
+	// The archer kills from 2 spaces away
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
 		if (Math.abs(playerLocation - this.location) == 2) {

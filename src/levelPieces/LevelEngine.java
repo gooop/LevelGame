@@ -1,8 +1,6 @@
 package levelPieces;
 
 import java.util.ArrayList;
-import java.util.Random;
-
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.Moveable;
@@ -12,14 +10,13 @@ public class LevelEngine {
 	private ArrayList<Moveable> movingPieces = new ArrayList<Moveable>();
 	private ArrayList<GamePiece> interactingPieces = new ArrayList<GamePiece>();
 	private int playerStartLoc = (GameEngine.BOARD_SIZE - 1) / 2;
-	private Random random = new Random();
-	private int randomBombInt;
 	
 	
 	public void createLevel(int levelNum) {
+		// generating of levels is put into helper functions
 		if (levelNum == 1) {
 			generateLevel1();
-		} else if (levelNum == 2) {
+		} else if (levelNum > 1) { // For compatibility, if the number of levels is greater than 1 (ie. 3), then level 2 will just be generated again
 			generateLevel2();
 		}
 		
@@ -86,8 +83,8 @@ public class LevelEngine {
 		// not initialized here.
 		Bomber bomberTwo = new Bomber('B', GameEngine.BOARD_SIZE - 6); 
 		gameBoard[GameEngine.BOARD_SIZE - 6] = bomberTwo;
-		movingPieces.add(bomberTwo); 	   // Note that bombs (another interactable piece) are placed by the bomber and
-		interactingPieces.add(bomberTwo); // not initialized here.
+		movingPieces.add(bomberTwo);
+		interactingPieces.add(bomberTwo); 
 		
 		// Bombs:
 		// Sets the bomb to be next to the bomber

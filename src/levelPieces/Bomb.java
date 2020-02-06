@@ -18,6 +18,7 @@ public class Bomb extends GamePiece {
 		System.out.print(symbol);
 	}
 	
+	// The bomb kills on contact
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
 		if (playerLocation == this.location) {

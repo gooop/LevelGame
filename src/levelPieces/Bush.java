@@ -3,6 +3,9 @@ package levelPieces;
 import gameEngine.Drawable;
 
 public class Bush implements Drawable{
+	/*
+	 * all the bush does is draw
+	 */
 	char symbol = '*';
 	int location;
 	
